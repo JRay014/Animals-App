@@ -16,7 +16,7 @@ function setDatabase() {
       port: 5432,
       host: 'localhost',
     });
-  } else (process.env.NODE_ENV === 'production') {
+  } else if (process.env.NODE_ENV === 'production') {
     return pgp(process.env.DATABASE_URL)
   }
 }
